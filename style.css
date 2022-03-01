@@ -1,0 +1,109 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #e1e1e6;
+  --title-color: #04d361;
+  --form-color: #a8a8a8;
+  --bg-button-color: #8257e5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap');
+
+/*
+Uso de fontes:
+font-family: 'Spartan', sans-serif;
+font-family: 'Work Sans', sans-serif;
+*/
+
+* {
+  margin: 0;
+  color: #e1e1e6; /*Cor das fontes do site*/
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    /*'header header'*/
+    'main aside'
+    'main aside'
+    'main aside';
+
+  grid-template-rows: 100px 1fr 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+header {
+  /*grid-area: header;*/
+  /*background-color: green;*/
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  /*
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px; */
+}
+
+#logo-rocketnews {
+  width: 500px;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--body-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#titulo-pagina {
+  color: var(--title-color);
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#subtitulo-pagina {
+  color: var(--text-color);
+  font-family: 'Spartan', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 10px;
+}
+
+#paragrafo-pagina {
+  font-family: 'Spartan', sans-serif;
+  font-style: normal;
+  font-weight: normal 400;
+  font-size: 14px;
+  line-height: 19px;
+  padding-top: 10px;
+}
+
+aside {
+  grid-area: aside;
+  background-image: url(./media/read_news.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+#image-read-news {
+  width: 500px;
+}
+
+footer {
+  /*grid-area: footer;*/
+  position: absolute;
+  top: 600px;
+  left: 660px;
+  background-color: gray;
+}
